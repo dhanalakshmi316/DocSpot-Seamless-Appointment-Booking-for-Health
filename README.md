@@ -135,7 +135,7 @@ Collections overview:
 
 You can download or view the demo video using the link below:
 
-[**▶️ Watch Demo Video (lopala demo.mp4)**](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/lopala%20demo.mp4)
+[**▶️ Watch Demo Video (demo.mp4)**](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/demo.mp4)
 
 ---
 
