@@ -20,6 +20,7 @@ DocSpot is a full-stack web application that simplifies booking medical appointm
 - [Project Structure](#-project-structure)
 - [Contribution](#-contribution)
 - [License](#-license)
+- [Contact](#-contact)
 
 ---
 
@@ -112,7 +113,7 @@ Collections overview:
 
 Make sure you have an `assets` folder at the project root containing the referenced images and demo video.
 
-Images
+Images:
 - Landing Page: `assets/landing_page.png`
 - Login Page: `assets/login_page.png`
 - Register Page: `assets/register_page.png`
@@ -121,10 +122,9 @@ Images
 - Doctor Dashboard: `assets/doctor_dashboard.png`
 - Admin Dashboard: `assets/admin_dashboard.png`
 
-- Admin Dashboard: `assets/admin_dashboard.png`
-
-Demo Video
-- A demo video is included in the assets folder: `assets/demo.mp4`
+Demo Video:
+- Recommended filename (no spaces): `assets/lopala_demo.mp4`
+  - If you already have a file with spaces, keep it but note that web URLs may need encoding (e.g., `lopala%20demo.mp4`).
 
 Embed (works on GitHub README via HTML):
 ```html
@@ -135,14 +135,14 @@ Embed (works on GitHub README via HTML):
 ```
 
 Fallback link:
-- Demo video file: [assets/lopala demo.mp4](assets/lopala%20demo.mp4)
+- Demo video file: [lopala_demo.mp4](assets/lopala_demo.mp4)
 
 ---
 
 ## ⚙️ Prerequisites
 
 - Node.js v14 or higher
-- npm
+- npm (or yarn)
 - MongoDB (local or Atlas)
 
 ---
@@ -189,6 +189,10 @@ npm run dev
 ```
 Vite's dev server usually runs at `http://localhost:5173`.
 
+Running frontend and backend concurrently
+- Option A: Open two terminals and run backend and frontend separately.
+- Option B: Use a tool like `concurrently` and add a script in root package.json to run both.
+
 ---
 
 ## 📂 Project Structure
@@ -202,7 +206,7 @@ DocSpot/
 │   ├── middlewares/    # Auth and upload middlewares
 │   ├── models/         # Mongoose schemas
 │   ├── routes/         # API endpoints
-│   ├── uploads/        # Stored medical documents
+│   ├── uploads/        # Stored medical documents (should be gitignored)
 │   ├── server.js       # Entry point
 │   └── .env            # Environment variables (not committed)
 ├── frontend/
@@ -214,13 +218,13 @@ DocSpot/
 │   │   ├── App.jsx     # Main component
 │   │   └── main.jsx    # DOM renderer
 │   └── package.json
-├── assets/             # Images and demo video (add `lopala demo.mp4` here)
+├── assets/             # Images and demo video (e.g., lopala_demo.mp4)
 └── README.md
 ```
 
 Notes:
-- Place the demo video file exactly at `assets/lopala demo.mp4` (or rename and update the README accordingly).
-- Keep `uploads/` in backend for user-uploaded documents; ensure `.gitignore` excludes uploads if necessary.
+- Place the demo video file at `assets/lopala_demo.mp4` (or keep your existing filename and update the README accordingly).
+- Ensure `backend/uploads/` is included in `.gitignore` to avoid committing user documents.
 
 ---
 
