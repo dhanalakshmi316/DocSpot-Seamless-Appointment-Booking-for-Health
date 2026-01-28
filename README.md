@@ -20,7 +20,6 @@ DocSpot is a full-stack web application that simplifies booking medical appointm
 - [Project Structure](#-project-structure)
 - [Contribution](#-contribution)
 - [License](#-license)
-- [Contact](#-contact)
 
 ---
 
@@ -48,18 +47,18 @@ DocSpot is a full-stack web application that simplifies booking medical appointm
 
 ## 🛠 Tech Stack
 
-Frontend
+**Frontend**
 - React (Vite)
 - Ant Design & Bootstrap
 - Redux Toolkit
 - Axios
 
-Backend
+**Backend**
 - Node.js + Express
 - Multer (file uploads)
 - Nodemailer (email notifications)
 
-Database & Security
+**Database & Security**
 - MongoDB with Mongoose
 - JWT for authentication
 - bcryptjs for password hashing
@@ -70,9 +69,9 @@ Database & Security
 
 DocSpot follows a classic client-server architecture:
 
-1. Client (React): UI for Users, Doctors, Admins; communicates via REST APIs.
-2. Server (Express): Business logic, authentication, file processing.
-3. Database (MongoDB): Stores users, doctors, appointments, documents.
+1. **Client (React):** UI for Users, Doctors, Admins; communicates via REST APIs.
+2. **Server (Express):** Business logic, authentication, file processing.
+3. **Database (MongoDB):** Stores users, doctors, appointments, documents.
 
 ---
 
@@ -81,191 +80,76 @@ DocSpot follows a classic client-server architecture:
 Collections overview:
 
 ### Users
-- _id — Unique identifier
-- name — Full name
-- email — Email address
-- password — Hashed password
-- isDoctor — Boolean
-- isAdmin — Boolean
-- notification — Array of notifications
+- `_id` — Unique identifier
+- `name` — Full name
+- `email` — Email address
+- `password` — Hashed password
+- `isDoctor` — Boolean
+- `isAdmin` — Boolean
+- `notification` — Array of notifications
 
 ### Doctors
-- _id — Unique identifier
-- userId — Reference to Users
-- specialization — Specialty
-- experience — Years
-- fees — Consultation fee
-- timings — Available time slots (start - end)
-- status — Approval status (Pending / Approved)
+- `_id` — Unique identifier
+- `userId` — Reference to Users
+- `specialization` — Specialty
+- `experience` — Years
+- `fees` — Consultation fee
+- `timings` — Available time slots (start - end)
+- `status` — Approval status (Pending / Approved)
 
 ### Appointments
-- _id — Unique identifier
-- userId — Patient ID
-- doctorId — Doctor ID
-- date — Appointment date
-- time — Appointment time
-- status — Pending / Scheduled / Completed / Cancelled
-- documents — Path(s) to uploaded files
+- `_id` — Unique identifier
+- `userId` — Patient ID
+- `doctorId` — Doctor ID
+- `date` — Appointment date
+- `time` — Appointment time
+- `status` — Pending / Scheduled / Completed / Cancelled
+- `documents` — Path(s) to uploaded files
 
 ---
 
 ## 📸 Screenshots & Demo
 
-Make sure you have an `assets` folder at the project root containing the referenced images and demo video.
+### Application Interface
 
-Images:
-- Landing Page: `assets/landing_page.png`
-- Login Page: `assets/login_page.png`
-- Register Page: `assets/register_page.png`
-- User Dashboard: `assets/user_dashboard.png`
-- Book Appointment: `assets/book_doctor.png`
-- Doctor Dashboard: `assets/doctor_dashboard.png`
-- Admin Dashboard: `assets/admin_dashboard.png`
+| Landing Page | Login Page |
+| :---: | :---: |
+| ![Landing Page](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/landing_page.png) | ![Login Page](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/login_page.png) |
 
-Demo Video:
-- Recommended filename (no spaces): `assets/lopala_demo.mp4`
-  - If you already have a file with spaces, keep it but note that web URLs may need encoding (e.g., `lopala%20demo.mp4`).
+| Register Page | Book Appointment |
+| :---: | :---: |
+| ![Register Page](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/register_page.png) | ![Book Doctor](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/book_doctor.png) |
 
-Embed (works on GitHub README via HTML):
-```html
-<video controls width="720" src="assets/lopala%20demo.mp4">
-  Your browser does not support the video tag. Download the demo:
-  <a href="assets/lopala%20demo.mp4">Download demo video</a>
-</video>
-```
+### Dashboards
 
-Fallback link:
-- Demo video file: [lopala_demo.mp4](assets/lopala_demo.mp4)
+**User Dashboard**
+![User Dashboard](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/user_dashboard.png)
+
+**Doctor Dashboard**
+![Doctor Dashboard](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/doctor_dashboard.png)
+
+**Admin Dashboard**
+![Admin Dashboard](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/admin_dashboard.png)
+
+### 🎥 Demo Video
+
+You can download or view the demo video using the link below:
+
+[**▶️ Watch Demo Video (lopala demo.mp4)**](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/lopala%20demo.mp4)
 
 ---
 
 ## ⚙️ Prerequisites
 
 - Node.js v14 or higher
-- npm (or yarn)
+- npm
 - MongoDB (local or Atlas)
 
 ---
 
 ## 📥 Installation & Setup
 
-1. Clone the repository
-```bash
-git clone https://github.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health.git
-cd DocSpot-Seamless-Appointment-Booking-for-Health
-```
-
-2. Backend Setup
-```bash
-cd backend
-npm install
-```
-
-Create a `.env` file in `backend/` with these variables (example):
-```env
-PORT=8080
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-CLIENT_URL=http://localhost:5173
-EMAIL_USER=your_email@gmail.com
-EMAIL_PASS=your_email_app_password
-ADMIN_EMAIL=admin@docspot.com
-ADMIN_PASSWORD=admin123
-```
-
-Start the backend:
-```bash
-npm start
-# or, if you prefer nodemon for development
-npm run dev
-```
-By default the server runs on port 8080 (unless you changed PORT in `.env`).
-
-3. Frontend Setup
-```bash
-cd ../frontend
-npm install
-npm run dev
-```
-Vite's dev server usually runs at `http://localhost:5173`.
-
-Running frontend and backend concurrently
-- Option A: Open two terminals and run backend and frontend separately.
-- Option B: Use a tool like `concurrently` and add a script in root package.json to run both.
-
----
-
-## 📂 Project Structure
-
-Root layout:
-```
-DocSpot/
-├── backend/
-│   ├── config/         # DB configuration
-│   ├── controllers/    # Route logic & business logic
-│   ├── middlewares/    # Auth and upload middlewares
-│   ├── models/         # Mongoose schemas
-│   ├── routes/         # API endpoints
-│   ├── uploads/        # Stored medical documents (should be gitignored)
-│   ├── server.js       # Entry point
-│   └── .env            # Environment variables (not committed)
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/ # Reusable UI components (Layout, DoctorCard)
-│   │   ├── pages/      # Pages (Login, Dashboard, Booking, etc.)
-│   │   ├── redux/      # Redux store & slices
-│   │   ├── App.jsx     # Main component
-│   │   └── main.jsx    # DOM renderer
-│   └── package.json
-├── assets/             # Images and demo video (e.g., lopala_demo.mp4)
-└── README.md
-```
-
-Notes:
-- Place the demo video file at `assets/lopala_demo.mp4` (or keep your existing filename and update the README accordingly).
-- Ensure `backend/uploads/` is included in `.gitignore` to avoid committing user documents.
-
----
-
-## 🤝 Contribution
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the project
-2. Create your feature branch
-```bash
-git checkout -b feature/AmazingFeature
-```
-3. Commit your changes
-```bash
-git commit -m "Add some AmazingFeature"
-```
-4. Push to branch
-```bash
-git push origin feature/AmazingFeature
-```
-5. Open a Pull Request
-
-Please open issues for bugs or feature requests before large changes.
-
----
-
-## 🧪 Tests
-
-(If you add tests later, document how to run them here — e.g., `npm test`)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
-
-## ✉️ Contact
-
-Project maintained by: ayyappavenkatasurya  
-For questions, open an issue or reach out via GitHub.
-
-Thank you for using DocSpot — making healthcare appointments simpler and more reliable.
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health.git](https://github.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health.git)
+   cd DocSpot-Seamless-Appointment-Booking-for-Health
