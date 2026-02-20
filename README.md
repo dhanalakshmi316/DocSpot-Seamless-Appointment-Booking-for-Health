@@ -28,29 +28,6 @@ DocSpot is a full-stack web application that simplifies booking medical appointm
 
 ---
 
-## 📸 Screenshots & Demo
-
-### Application Interface
-
-| Landing Page | Login Page |
-| :---: | :---: |
-| ![Landing Page](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/landing_page.png) | ![Login Page](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/login_page.png) |
-
-| Register Page | Book Appointment |
-| :---: | :---: |
-| ![Register Page](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/register_page.png) | ![Book Doctor](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/book_doctor.png) |
-
-### Dashboards
-
-**User Dashboard**
-![User Dashboard](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/user_dashboard.png)
-
-**Doctor Dashboard**
-![Doctor Dashboard](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/doctor_dashboard.png)
-
-**Admin Dashboard**
-![Admin Dashboard](https://raw.githubusercontent.com/ayyappavenkatasurya/DocSpot-Seamless-Appointment-Booking-for-Health/master/assets/admin_dashboard.png)
-
 ### 🎥 Demo Video
 
 You can download or view the demo video using the link below:
